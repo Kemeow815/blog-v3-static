@@ -45,7 +45,7 @@ const { data: postLink } = await useAsyncData('/link', () => queryContent('/link
             <ProseA href="/atom.xml" icon="ph:rss-simple-bold">
                 订阅源
             </ProseA>
-            <ProseA href="https://app.follow.is/share/feeds/62533754566736896" icon="ph:list-plus-bold">
+            <ProseA href="https://app.follow.is/share/feeds/135622467121437696" icon="ph:list-plus-bold">
                 在 Folo 上订阅
             </ProseA>
         </div>
