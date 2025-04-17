@@ -23,7 +23,7 @@ const blogConfig = {
         name: '署名-非商业性使用-相同方式共享 4.0 国际',
         url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
     },
-    favicon: '/image/avatar.webp',
+    favicon: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/Kemeow815avatar.png',
     language: 'zh-Hans',
     tgGroup: 'https://t.me/KemiaoJun',
     timeEstablished: '2025-02-11',
