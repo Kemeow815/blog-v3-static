@@ -9,9 +9,9 @@ export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
 // 此处为启动时需要的配置，启动后可变配置位于 app/app.config.ts
 const blogConfig = {
     title: '喵落阁',
-    subtitle: '总有些事情高于其他！',
+    subtitle: '总有些事情高于其他！feedId:135622467121437696+userId:127507323861832704',
     // 长 description 利好于 SEO
-    description: '克喵的个人博客，取自纸鹿的主题。feedId:135622467121437696+userId:127507323861832704',
+    description: '克喵的个人博客，取自纸鹿的主题。',
     author: {
         name: '克喵爱吃卤面',
         avatar: 'https://cravatar.cn/avatar/7614B285E795F21E780247019C4E15C4',
