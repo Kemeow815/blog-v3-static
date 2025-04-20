@@ -69,9 +69,9 @@ Telegram可以在[频道](https://t.me/kemiaofx_me)、[群组](https://t.me/kemi
 大部分应该都会用到站点维护工作上，也有可能优先解决个人存活问题（比如吃饭），适当投喂鸽子可以减少鸽子咕咕咕的概率，投喂博主也会减少博主咕咕咕的概率（Bushi）
 ::tab{:tabs='["微信", "支付宝"]'}
 #tab1
-![](https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137037.jpg)
+![](https://s2.loli.net/2025/04/13/HQ4lbFfJkpU2R9V.jpg)
 #tab2
-![](https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202502232137332.jpg)
+![](https://s2.loli.net/2025/04/13/HYrnNFOKDZPSv4p.jpg)
 ::
 如果你选择投食，你可以留下你的话，我都会展示在这里，不管数额有多少。（我可能也会列出我的回复）
 
