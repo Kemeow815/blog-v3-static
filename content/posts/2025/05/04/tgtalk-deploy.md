@@ -1,4 +1,14 @@
-部署 API
+---
+title: tgtalk免费部署
+description: 一个基于 Cloudflare Workers 的 tg 频道消息说说。
+date: 2025-05-04 23:48:30
+updated: 2025-05-05 00:00:50
+categories: [技术分享]
+tags: [教程, 部署, tgtalk, 说说]
+image: https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505051857682.webp
+---
+
+## 部署 API
 
 访问 [Gist][1] 并获取其中所有代码
 
