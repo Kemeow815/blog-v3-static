@@ -18,7 +18,7 @@ recommend: 2
 | ----------------- | -------------------------- | ----------------------- |
 | `# Heading level 1` | &lt;h1&gt;Heading level 1&lt;/h1&gt; |<h1>Heading level 1</h1>|
 | `## Heading level 2` | &lt;h2&gt;Heading level 1&lt;/h2&gt; | <h2>Heading level 2</h2> |
-| `### Heading level 3` | &lt;h3&gt;Heading level 1&lt;/h3&gt;` | <h3>Heading level 3</h3> |
+| `### Heading level 3` | &lt;h3&gt;Heading level 1&lt;/h3&gt; | <h3>Heading level 3</h3> |
 | `#### Heading level 4` | &lt;h4&gt;Heading level 1&lt;/h4&gt; | <h4>Heading level 4</h4> |
 | `##### Heading level 5` | &lt;h5&gt;Heading level 1&lt;/h5&gt; | <h5>Heading level 5</h5> |
 | `###### Heading level 6` | &lt;h6&gt;Heading level 1&lt;/h6&gt; | <h6>Heading level 6</h6> |
@@ -26,7 +26,7 @@ recommend: 2
 ## 可选语法
 还可以在文本下方添加任意数量的 == 号来标识一级标题，或者 -- 号来标识二级标题。
 
-| Markdown语法                            | HTML                       | <div style="width:100px;">预览效果</div> |
+| Markdown语法                            | HTML                       | 预览效果 |
 | --------------------------------------- | -------------------------- | ---------------------------------------- |
 | `Heading level 1`<br> `===============` | &lt;h1&gt;Heading level 1&lt;/h1&gt; | <h1>Heading level 1</h1>                 |
 | `Heading level 2`<br>`---------------`   | &lt;h2&gt;Heading level 2&lt;/h2&gt; | <h2>Heading level 2</h2>                 |
