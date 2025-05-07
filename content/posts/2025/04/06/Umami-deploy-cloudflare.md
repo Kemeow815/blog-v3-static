@@ -21,7 +21,7 @@ recommend: 5
 
 2. 第二步
 
-　2.1 创建[Verce](https://vercel.com/login)l账号，这里我就省略了，因为GitHub可以直接进行授权即可。
+　2.1 创建[Vercel](https://vercel.com/login)账号，这里我就省略了，因为GitHub可以直接进行授权即可。
 
    2.2 在你授权以后，首先创建<kbd>Postgres</kbd>数据库，直接一路下一步，创建好就行，可以给下面的连接复制出来
 

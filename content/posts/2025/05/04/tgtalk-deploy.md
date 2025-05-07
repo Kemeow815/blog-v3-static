@@ -13,7 +13,6 @@ image: https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505051857682.webp
 访问 [Gist][1] 并获取其中所有代码
 
 > 需要注意，本 API Worker 脚本基于 ChenYFan 修改，包含了本项目需要使用的功能，请勿随意更改脚本内容
-
 > TGTalker-Frontend V2 的 API 不兼容 V1
 
 进入 [Cloudflare 仪表盘][2]
