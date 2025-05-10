@@ -3,7 +3,7 @@ title: DROP：便捷大文件分享与托管网站，免费享10GB空间免费�
 description: DROP 是一个便捷的文件分享与托管平台，云存储工具，提供免费10GB的存储空间，支持大文件的快速上传与分享。
 date: 2025-05-09 20:48:30
 updated: 2025-05-09 21:00:50
-categories: [技术分享]
+categories: [资源分享]
 tags: [托管网站, 大文件分享, 免费空间]
 image: https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505092245268.png
 ---

@@ -14,6 +14,7 @@ export default defineAppConfig({
             生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
             代码: { icon: 'ph:code-bold', color: '#77f' },
             技术分享: { icon: 'ph:share-network-bold', color: '#f3a' },
+            资源分享: { icon: 'pepicons-pop:share-android-circle', color: '#58f100' },
             专栏: { icon: 'line-md:coffee-half-empty-twotone-loop', color: '#B97BDB' },
             未分类: { icon: 'ph:folder-dotted-bold' },
         },
