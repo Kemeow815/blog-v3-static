@@ -40,7 +40,7 @@ DROP 是一个便捷的文件分享与托管平台，云存储工具，提供免
 
 ### 网站地址
 
-[https://drop.space/](https://www.appmiu.com/go/pc6w)
+https://drop.space/
 
 ---
 

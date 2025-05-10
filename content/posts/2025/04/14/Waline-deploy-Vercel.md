@@ -25,7 +25,7 @@ recommend: 3
 
    ![创建应用](https://s2.loli.net/2025/04/14/7FOYbvS8MlQXe52.png)
 
-1. 进入应用，选择左下角的 `设置` > `应用 Key`。你可以看到你的 `APP ID`,`APP Key` 和 `Master Key`。请记录它们，以便后续使用。
+1. 进入应用，选择左下角的 `设置` > `应用 Key`。你可以看到你的 `APP ID`，`APP Key` 和 `Master Key`。请记录它们，以便后续使用。
 
    ![ID 和 Key](https://s2.loli.net/2025/04/14/c1Vltvsm8GYXSbf.png)
 

@@ -29,7 +29,7 @@ recommend: 5
 
 ![](https://s2.loli.net/2025/04/06/7OieEKGht4kgSux.webp)
 
-　　点击<kbd>Copy Snippet</kbd>​,就可以，记住在粘贴的时候是我画线里面的部分，双引号都不需要 ，因为要设置环境变量。
+　　点击<kbd>Copy Snippet</kbd>，就可以，记住在粘贴的时候是我画线里面的部分，双引号都不需要 ，因为要设置环境变量。
 
 　　 2.3 在创建好数据库以后，回到主页面的<kbd>Overview</kbd>​，然后右上角有一个<kbd>Add New</kbd>​选择添加<kbd>Project</kbd>​，选择你<kbd>Fork</kbd>​的<kbd>umami</kbd>​，添加即可。
     2.4 设置环境变量，`DATABASE_URL`​和`HASH_SALT`​和`TRACKER_SCRIPT_NAME`​，其中`DATABASE_URL`​的值就是上面划线的部分，其他的两个环境变量都是对应的值是String自己可以随意定义。
