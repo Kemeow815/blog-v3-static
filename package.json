@@ -9,6 +9,7 @@
     "dev": "nuxt dev --no-qr",
     "build": "cross-env NODE_OPTIONS='--no-deprecation' nuxt build",
     "generate": "nuxt generate",
+    "start": "nuxt generate && nuxt preview",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
