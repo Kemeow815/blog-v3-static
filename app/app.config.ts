@@ -78,7 +78,7 @@ export default defineAppConfig({
             },
         ] satisfies Nav,
         /** 页脚版权信息底部的其他信息 */
-        message: '',
+        message: '<a href="https://icp.gov.moe/?keyword=20250530" target="_blank">萌ICP备20250530号</a>',
     },
 
     /** 左侧栏顶部 Logo */
