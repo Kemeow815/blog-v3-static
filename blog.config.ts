@@ -14,8 +14,8 @@ const blogConfig = {
     description: '克喵的个人博客，取自纸鹿的主题。',
     author: {
         name: '克喵爱吃卤面',
-        avatar: 'https://s2.loli.net/2025/04/20/V8zWaEoxP5msqNQ.jpg',
-        email: 'kemiaofx@163.com',
+        avatar: 'https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256',
+        email: 'me@kemiaosw.top',
         homepage: 'https://www.kemiao.online/',
     },
     copyright: {
