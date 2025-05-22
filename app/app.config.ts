@@ -83,7 +83,7 @@ export default defineAppConfig({
 
     /** 左侧栏顶部 Logo */
     header: {
-        logo: 'https://weavatar.com/avatar/7614B285E795F21E780247019C4E15C4',
+        logo: 'https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2',
         /** 展示标题文本，否则展示纯 Logo */
         showTitle: true,
         subtitle: blogConfig.subtitle,
