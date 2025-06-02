@@ -9,6 +9,7 @@ export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
 // 此处为启动时需要的配置，启动后可变配置位于 app/app.config.ts
 const blogConfig = {
     title: '喵落阁',
+    bgmUsername: 'kemiao',
     subtitle: '总有些事情高于其他！',
     // 长 description 利好于 SEO
     description: '克喵的个人博客，取自纸鹿的主题。',
@@ -38,6 +39,7 @@ const blogConfig = {
     hideContentPrefixes: ['/posts'],
 
     imageDomains: [
+        'blog-v3.kemeow.top',
         // 自动启用本域名的 Nuxt Image
         // 'www.zhilu.cyou',
         // '7.isyangs.cn',
