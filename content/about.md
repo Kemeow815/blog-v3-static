@@ -3,66 +3,80 @@ title: 关于
 hide-info: true
 ---
 
-## 我？
+### Hello
 
-这是克喵爱吃卤面，一个普普通通的南京大学牲，专业是自动化技术与应用，目前大二在读。
+<div style="text-align: center; margin: 20px 0;">
+  <a href="https://blog-v3.kemeow.top/">
+    <img 
+      src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" 
+      alt="GIF Link" 
+      height="275" 
+      style="max-width: 100%; height: auto; display: inline-block;"
+    />
+  </a>
+</div>
 
-2023年
-🌱 年初
+- 🔭 I’m currently studying in Nanjing
+- 🌱 Current learning content: Automation Technology and Applications, front-end (sub), etc
+- 💬 You can ask me some questions about resources。
+- 📫 How to contact my email or official account: kemiaofx@163.com
+- 🍉 Active Community：[BLOG](https://blog-v3.kemeow.top) | [Telegram](https://t.me/KemiaoJun) |  [X](https://x.com/kemiaosw/) 
 
-├── 初次接触「小绿书」
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text=HI%20THERE!&fontSize=90&fontAlign=50&fontAlignY=30&desc=I%20AM%20KeMiao%20%F0%9F%91%8B&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
+</p>
 
-└── 开启技术内容分享与学习之路
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=25&pause=1000&center=true&vCenter=true&random=false&width=600&lines=Welcome+to+my+About+page!;I+am+KeMiao+obsessed+with+programming!" />
+</p>
 
-❄️ 年末
+### 👋 个人简介 
+---
+[个人主页](https://kemiao.online) | [博客站点](https://blog-v3.kemeow.top)
 
-├── 加入 Telegram 技术社群
+大家好！这里是克喵爱吃卤面的博客。致力于分享资源、生活日记和踩坑教程，代码水准一般，自动化专业大二学生，现于南京就读，普通的大学牛马。
 
-├── 关注资源分享渠道：
+### 关于我
 
-│   ├️ [@txwl666 (资源分享)](https://t.me/txwl666)
+---
 
-│   └️ [@haoruanfenxiang (好软分享)](https://t.me/haoruanfenxiang)
+- 🖥 **个性:** 开朗活泼，热爱学习，勤奋工作
+- 🖥 **技能:** 自动化技术与应用
+- 🖥 **个人信息:**
+    - 🧑 **姓名:** mcy
+    - 🏫 **学校:** 南京工业职业技术大学，[官方网站](https://www.niit.edu.cn/)
+    - 🏛️ **年级:** 大二
+    - 👷 **职业:** 学生
+- 🖥 **兴趣:** 计算机，单机游戏，电子产品，数码产品，资源分享
+- 🖥 **梦想:** 咸鱼算不算？
 
-└── 建立技术资源获取网络
+---
 
-2024年
+### 📈 我的GitHub数据
 
-❄️ 年末
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Kemeow815" alt="GitHub Stats" />
+</div>
 
-├── 开启个人博客实验：
+<p align="center">
+  <a>
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kemeow815&theme=github-compact&custom_title=Activity&radius=30&height=300" alt="Activity">
+  </a>
+</p>
 
-│   ├️ 首版博客源码：[BroadcastChannel](https://github.com/ccbikai/BroadcastChannel)
+<div align="center">
+  <img 
+    src="https://github-immortality.vercel.app/api?username=Kemeow815" 
+    alt="修仙系列统计卡片" 
+    style="max-width: 100%; height: auto;" 
+  />
+</div>
 
-│   ├️ 框架方案：[Hexo](https://hexo.io/zh-cn/) + [Butterfly](https://butterfly.js.org/)
+---
 
-│   └️ 部署托管平台：[Vercel](https://vercel.com/)
+### 赞助
 
-2025年
-
-🌸 二月
-
-└── 技术升级：使用 Nuxt 全栈博客
-
-└── 当前博客版本上线
-
-单机游戏爱好者：饥荒，启动！杰出SM！
-
-## Tags
-
-大学牲 / 伪二次元 / 游戏党 / 瞎折腾 / 搞事情 / 日常生产bug
-
-## 找我？
-
-个人在社交工具上偏QQ，微信多为熟人（现实中认识的人），我的QQ是：3149261770。
-
-邮箱上域名邮箱（<kemiao@kmblog.icu>）被看到的优先级比较高，163邮箱（<kemiaofx@163.com>）则次之。
-
-Telegram可以在[频道](https://t.me/kemiaofx_me)、[群组](https://t.me/kemiao_me)找我，克喵爱吃卤面: <https://t.me/Kemiaojun>，建议用机器人: <https://t.me/KemeowBot>找
-
-我。
-
-## 投食
+- 微信公众号：[克喵的小站](https://wechat.kemeow.top/)
 
 这个博主目前还是个可怜巴巴的学生党，如果你愿意的话可以投喂他！
 
@@ -73,7 +87,6 @@ Telegram可以在[频道](https://t.me/kemiaofx_me)、[群组](https://t.me/kemi
 #tab2
 ![](https://s2.loli.net/2025/04/13/HYrnNFOKDZPSv4p.jpg)
 ::
-如果你选择投食，你可以留下你的话，我都会展示在这里，不管数额有多少。（我可能也会列出我的回复）
 
 ## 版权？
 
