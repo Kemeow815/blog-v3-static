@@ -95,7 +95,7 @@ export default defineAppConfig({
         /** 默认排序方式，需要是 this.article.order 中的键名 */
         sortOrder: 'date' as const,
         /** 允许（普通/预览/归档）文章列表正序，开启后排序方式左侧图标可切换顺序 */
-        allowAscending: false,
+        allowAscending: true,
     },
 
     /** 左侧栏导航 */
@@ -104,6 +104,7 @@ export default defineAppConfig({
             title: '',
             items: [
                 { icon: 'ph:files-bold', text: '文章', url: '/' },
+                { icon: 'hugeicons:wechat', text: '朋友圈', url: 'http://pyq.kemiao.online' },
                 { icon: 'ph:link-bold', text: '友链', url: '/link' },
                 { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
                 { icon: 'icon-park-outline:game-handle', text: '游戏', url: '/game' },
