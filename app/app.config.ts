@@ -87,7 +87,7 @@ export default defineAppConfig({
         /** 展示标题文本，否则展示纯 Logo */
         showTitle: true,
         subtitle: blogConfig.subtitle,
-        emojiTail: ['📄', '🦌', '🙌', '🐟', '🏖️'],
+        emojiTail: ['📄', '📖', '📓', '📚', '📔'],
     },
 
     pagination: {
