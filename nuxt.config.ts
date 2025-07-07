@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         rootId: 'z-root',
     },
 
-    compatibilityDate: '2024-08-03',
+    compatibilityDate: '2025-02-11',
 
     components: [
         { path: '~/components/partial', prefix: 'Z' },

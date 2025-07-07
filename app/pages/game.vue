@@ -12,7 +12,7 @@ layoutStore.setAside(['blog-stats', 'blog-log'])
 
 const page = ref(1)
 const collectionType = ref<CollectionType>('wish')
-const { data, error, status, totalPages } = useBangumi(contentType, collectionType, page)
+const { data, error, totalPages } = useBangumi(contentType, collectionType, page)
 
 const games = computed(() => data.value?.data || [])
 

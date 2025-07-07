@@ -104,7 +104,7 @@ export default defineAppConfig({
             title: '',
             items: [
                 { icon: 'ph:files-bold', text: '文章', url: '/' },
-                { icon: 'hugeicons:wechat', text: '朋友圈', url: 'https://pyq.kemiao.online' },
+                { icon: 'hugeicons:wechat', text: '朋友圈', url: 'https://moment.050815.xyz' },
                 { icon: 'tabler:photo', text: '时光馆', url: 'https://photos.050815.xyz' },
                 { icon: 'ph:link-bold', text: '友链', url: '/link' },
                 { icon: 'ph:archive-bold', text: '归档', url: '/archive' },
