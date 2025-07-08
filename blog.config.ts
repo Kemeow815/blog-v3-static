@@ -26,7 +26,7 @@ const blogConfig = {
     },
     favicon: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/Kemeow815avatar.png',
     language: 'zh-Hans',
-    tgGroup: 'https://t.me/KemiaoJun',
+    tgGroup: 'https://t.me/kemiao_me',
     timeEstablished: '2025-02-11',
     timezone: 'Asia/Shanghai',
     url: 'https://blog-v3.kemeow.top/',
@@ -50,9 +50,9 @@ const blogConfig = {
 
     scripts: [
         // 自己部署的 Umami 统计服务
-        { 'src': 'https://cloud.umami.is/script.js', 'data-website-id': '6aeee90d-4cea-4484-82bd-956217f7d6eb', 'defer': true },
+        { 'src': 'https://unami-kemiao.kemiaosw.top/script.js', 'data-website-id': '1a8feaa6-0c4d-444e-8693-02e5a547181a', 'defer': true },
         // Cloudflare Insights 统计服务
-        { 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "97a4fe32ed8240ac8284e9bffaf03962"}', 'defer': true },
+        { 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "8ed3d622df28470082073926f8c105d1"}', 'defer': true },
     ],
 
     // 用于 Shiki、Plain Shiki 引入代码高亮
