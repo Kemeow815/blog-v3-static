@@ -16,7 +16,7 @@ const blogConfig = {
     author: {
         name: '克喵爱吃卤面',
         avatar: 'https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256',
-        email: 'me@kemiaosw.top',
+        email: 'me@mail.kemeow.top',
         homepage: 'https://www.kemiao.online/',
     },
     copyright: {
@@ -67,16 +67,16 @@ const blogConfig = {
 
     // 用于 Twikoo 评论系统
     twikoo: {
-        js: 'https://source.kemiaofx.top/twikoo/twikoo.all.min.js',
-        envId: 'https://twikoo.kemiaofx.top/',
-        preload: 'https://twikoo.kemiaofx.top/',
+        js: 'https://source.314926.xyz/assets/twikoo.min.js',
+        envId: 'https://twikoo-blog-v3.314926.xyz/',
+        preload: 'https://twikoo-blog-v3.314926.xyz/',
     },
 }
 
 // 用于生成 OPML 和友链页面配置
 export const myFeed = <FeedEntry>{
     author: blogConfig.author.name,
-    sitenick: '摸鱼处',
+    sitenick: '喵落阁',
     title: blogConfig.title,
     desc: blogConfig.subtitle || blogConfig.description,
     link: blogConfig.url,
@@ -85,7 +85,7 @@ export const myFeed = <FeedEntry>{
     avatar: blogConfig.author.avatar,
     archs: ['Nuxt', 'Vercel'],
     date: blogConfig.timeEstablished,
-    comment: '这是我自己',
+    comment: '奇迹只是一时，命运总是漫长。',
 }
 
 // 将旧页面永久重定向到新页面
