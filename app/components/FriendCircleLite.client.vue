@@ -1,11 +1,25 @@
 <!-- components/FriendCircleLite.client.vue -->
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
 
+// 扩展 Window 接口以包含自定义属性
+declare global {
+    interface Window {
+        UserConfig?: {
+            private_api_url: string
+            page_turning_number: number
+            error_img: string
+        }
+        fclResources?: {
+            cssLink: HTMLLinkElement
+            script: HTMLScriptElement
+        }
+    }
+}
+
 onMounted(() => {
-    // 确保在客户端执行
     if (typeof window !== 'undefined') {
-        // 1. 设置配置
+    // 1. 设置配置
         window.UserConfig = {
             private_api_url: 'https://fc.314926.xyz/',
             page_turning_number: 24,
@@ -32,18 +46,24 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+    if (typeof window !== 'undefined') {
     // 清理资源
-    if (typeof window !== 'undefined' && window.fclResources) {
-        document.head.removeChild(window.fclResources.cssLink)
-        document.body.removeChild(window.fclResources.script)
-        delete window.fclResources
-        delete window.UserConfig
-    }
+        if (window.fclResources) {
+            document.head.removeChild(window.fclResources.cssLink)
+            document.body.removeChild(window.fclResources.script)
+            delete window.fclResources
+        }
 
-    // 清理DOM内容
-    const root = document.getElementById('friend-circle-lite-root')
-    if (root)
-        root.innerHTML = ''
+        // 清理配置
+        if (window.UserConfig) {
+            delete window.UserConfig
+        }
+
+        // 清理DOM内容
+        const root = document.getElementById('friend-circle-lite-root')
+        if (root)
+            root.innerHTML = ''
+    }
 })
 </script>
 

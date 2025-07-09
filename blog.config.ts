@@ -70,7 +70,7 @@ const blogConfig = {
         js: 'https://source.314926.xyz/assets/twikoo.min.js',
         envId: 'https://twikoo-blog-v3.314926.xyz/',
         preload: 'https://twikoo-blog-v3.314926.xyz/',
-        region: 'ap-Suzhou',
+        region: 'ap-shanghai',
     },
 }
 

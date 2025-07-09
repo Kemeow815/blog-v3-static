@@ -77,6 +77,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             buildTime: new Date().toISOString(),
+            isClient: process.client,
         },
     },
 
