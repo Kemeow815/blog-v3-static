@@ -1,21 +1,15 @@
-import {
-    LazyWidgetBlogLog,
-    LazyWidgetBlogStats,
-    LazyWidgetConnectivity,
-    LazyWidgetEmpty,
-    LazyWidgetGithubCard,
-    LazyWidgetToc,
-} from '#components'
 import { pascal } from 'radash'
+import { defineAsyncComponent } from 'vue'
 
 // @keep-sorted
 const rawWidgets = {
-    LazyWidgetBlogLog,
-    LazyWidgetBlogStats,
-    LazyWidgetConnectivity,
-    LazyWidgetEmpty,
-    LazyWidgetGithubCard,
-    LazyWidgetToc,
+    LazyWidgetBlogLog: defineAsyncComponent(() => import('~/components/widget/BlogLog.vue')),
+    LazyWidgetBlogStats: defineAsyncComponent(() => import('~/components/widget/BlogStats.vue')),
+    LazyWidgetConnectivity: defineAsyncComponent(() => import('~/components/widget/Connectivity.vue')),
+    LazyWidgetEmpty: defineAsyncComponent(() => import('~/components/widget/Empty.vue')),
+    LazyWidgetGithubCard: defineAsyncComponent(() => import('~/components/widget/GithubCard.vue')),
+    LazyWidgetLatestComments: defineAsyncComponent(() => import('~/components/WidgetLatestComments.vue')),
+    LazyWidgetToc: defineAsyncComponent(() => import('~/components/widget/Toc.vue')),
 }
 
 type RawWidgetName = keyof typeof rawWidgets
@@ -32,7 +26,7 @@ export type WidgetName = RemovePrefix<KebabCase<RawWidgetName>, '-lazy-widget-'>
 export default function useWidgets(widgetList: MaybeRefOrGetter<WidgetName[]>) {
     const widgets = computed(() => (toValue(widgetList) || []).map(widget => ({
         name: widget,
-        comp: rawWidgets[`LazyWidget${pascal(widget)}` as RawWidgetName],
+        comp: rawWidgets[`LazyWidget${pascal(widget)}` as RawWidgetName] || rawWidgets[`Widget${pascal(widget)}` as RawWidgetName],
     })))
     return {
         widgets,
