@@ -31,7 +31,7 @@ Markdown 速查表提供了所有 **Markdown**
 | 有序列表（Ordered List） | 1\. First item<br> 2. Second item<br> 3. Third item |
 | 无序列表（Unordered List） | \- First item<br> - Second item<br> - Third item |
 | 代码（Code） | \`code\` |
-| 分隔线（Horizontal Rule） | — |
+| 分隔线（Horizontal Rule） | `---` |
 | 链接（Link） | \[title\](<https://www.example.com>) |
 | 图片（Image） | \![alt text\](image.jpg) |
 
