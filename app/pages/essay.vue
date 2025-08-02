@@ -15,7 +15,7 @@ useSeoMeta({
 
 // API 配置常量
 const API_CONFIG = {
-    MEMO_API: 'https://moment.050815.xyz/api/memo/list',
+    MEMO_API: 'https://moment.051531.xyz/api/memo/list',
     PAGE_SIZE: 30,
 }
 
@@ -229,7 +229,7 @@ function searchLocation(location: string) {
         <template #extra>
             <div class="essay-stats">
                 <div class="powered-by">Powered by moments</div>
-                <a class="essay-more" href="https://moment.050815.xyz" target="_blank" rel="noopener noreferrer">
+                <a class="essay-more" href="https://moment.051531.xyz" target="_blank" rel="noopener noreferrer">
                     <Icon name="icon-park-twotone:more-app" class="icon" />
                     查看更多
                 </a>
