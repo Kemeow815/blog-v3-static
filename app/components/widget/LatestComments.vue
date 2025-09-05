@@ -174,8 +174,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .comments-container {
-    min-height: 343px;
-    position: relative;
+	position: relative;
+	min-height: 343px;
 }
 
 %center-flex {
