@@ -70,5 +70,3 @@ patchedDependencies:
   vue-tippy: patches/vue-tippy.patch
 
 shamefullyHoist: true
-catalog:
-  sharp: ^0.34.3

@@ -5,20 +5,17 @@ import {
 	LazyWidgetCommGroup,
 	LazyWidgetEmpty,
 	LazyWidgetGithubCard,
-	LazyWidgetLatestComments,
-	LazyWidgetPoetry,
 	LazyWidgetToc,
 } from '#components'
 import { pascal } from 'radash'
 
+// @keep-sorted
 const rawWidgets = {
 	LazyWidgetBlogLog,
 	LazyWidgetBlogStats,
 	LazyWidgetBlogTech,
 	LazyWidgetCommGroup,
-	LazyWidgetPoetry,
 	LazyWidgetEmpty,
-	LazyWidgetLatestComments,
 	LazyWidgetGithubCard,
 	LazyWidgetToc,
 }
@@ -30,9 +27,9 @@ type KebabCase<S extends string> = S extends `${infer First}${infer Rest}`
 	? `${First extends Capitalize<First> ? '-' : ''}${Lowercase<First>}${KebabCase<Rest>}`
 	: ''
 
-type TrimLeadingString<S extends string, Prefix extends string> = S extends `${Prefix}${infer Rest}` ? Rest : S
+type RemovePrefix<S extends string, Prefix extends string> = S extends `${Prefix}${infer Rest}` ? Rest : S
 
-export type WidgetName = TrimLeadingString<KecabCase<RawWidgetName>, '-lazy-widget-'>
+export type WidgetName = RemovePrefix<KebabCase<RawWidgetName>, '-lazy-widget-'>
 
 export default function useWidgets(widgetList: MaybeRefOrGetter<WidgetName[]>) {
 	const widgets = computed(() => (toValue(widgetList) || []).map(widget => ({
