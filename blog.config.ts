@@ -32,13 +32,18 @@ const basicConfig = {
 const blogConfig = {
 	...basicConfig,
 
+	artalk: {
+		server: 'https://artalk.050815.xyz/',
+		sitename: '喵洛阁',
+	},
+
 	article: {
 		categories: {
 			[basicConfig.defaultCategory]: { icon: 'ph:folder-dotted-bold' },
 			经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
 			杂谈: { icon: 'ph:chat-bold', color: '#3ba' },
-            技术分享: { icon: 'ph:share-network-bold', color: '#f3a' },
-            资源分享: { icon: 'pepicons-pop:share-android-circle', color: '#58f100' },
+			技术分享: { icon: 'ph:share-network-bold', color: '#f3a' },
+			资源分享: { icon: 'pepicons-pop:share-android-circle', color: '#58f100' },
 			生活: { icon: 'ph:shooting-star-bold', color: '#f77' },
 			代码: { icon: 'ph:code-bold', color: '#77f' },
 		},
@@ -68,17 +73,19 @@ const blogConfig = {
 	/** 向 <head> 中添加脚本 */
 	scripts: [
 		// 自己部署的 Umami 统计服务
-        { 'src': 'https://unami-kemiao.kemiaosw.top/script.js', 'data-website-id': '1a8feaa6-0c4d-444e-8693-02e5a547181a', 'defer': true },
-        // Cloudflare Insights 统计服务
-        { 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "8ed3d622df28470082073926f8c105d1"}', 'defer': true },
+		{ 'src': 'https://unami-kemiao.kemiaosw.top/script.js', 'data-website-id': '1a8feaa6-0c4d-444e-8693-02e5a547181a', 'defer': true },
+		// Cloudflare Insights 统计服务
+		{ 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "8ed3d622df28470082073926f8c105d1"}', 'defer': true },
 		// Twikoo 评论系统
 		{ src: 'https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js', defer: true },
+		// artalk 评论系统
+		{ src: 'https://artalk.050815.xyz/dist/Artalk.js', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
 	twikoo: {
-		envId: 'https://twikoo.zhilu.cyou/',
-		preload: 'https://twikoo.zhilu.cyou/',
+		envId: 'https://twikoo-blog-v3.314926.xyz',
+		preload: 'https://twikoo-blog-v3.314926.xyz',
 	},
 }
 
