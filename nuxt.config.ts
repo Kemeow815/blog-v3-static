@@ -1,163 +1,188 @@
+import type { NitroConfig } from 'nitropack'
 import process from 'node:process'
-import blogConfig, { routeRules } from './blog.config'
+import ci from 'ci-info'
+import blogConfig from './blog.config'
+import packageJson from './package.json'
+import redirectList from './redirects.json'
 
 // 此处配置无需修改
 export default defineNuxtConfig({
-    app: {
-        head: {
-            htmlAttrs: {
-                lang: blogConfig.language,
-            },
-            meta: [
-                { name: 'author', content: [blogConfig.author.name, blogConfig.author.email].filter(Boolean).join(', ') },
-                // 此处为元数据的生成器标识，不建议修改
-                { 'name': 'generator', 'content': 'blog-v3', 'data-github-repo': 'https://github.com/L33Z22L11/blog-v3' },
-                { name: 'mobile-web-app-capable', content: 'yes' },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-            ],
-            link: [
-                { rel: 'icon', href: blogConfig.favicon },
-                { rel: 'alternate', type: 'application/atom+xml', href: '/atom.xml' },
-                { rel: 'preconnect', href: blogConfig.twikoo.preload },
+	app: {
+		head: {
+			meta: [
+				{ name: 'author', content: [blogConfig.author.name, blogConfig.author.email].filter(Boolean).join(', ') },
+				// 此处为元数据的生成器标识，不建议修改
+				{ 'name': 'generator', 'content': packageJson.name, 'data-github-repo': packageJson.homepage, 'data-version': packageJson.version },
+				{ name: 'mobile-web-app-capable', content: 'yes' },
+			],
+			link: [
+				{ rel: 'icon', href: blogConfig.favicon },
+				{ rel: 'alternate', type: 'application/atom+xml', href: '/atom.xml' },
+				{ rel: 'preconnect', href: blogConfig.twikoo.preload },
+				{ rel: 'stylesheet', href: 'https://lib.baomitu.com/KaTeX/0.16.9/katex.min.css' },
+				// "InterVariable", "Inter", "InterDisplay"
+				{ rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
+				// "JetBrains Mono", 思源黑体 "Noto Sans SC", 思源宋体 "Noto Serif SC"
+				{ rel: 'preconnect', href: 'https://fonts.gstatic.cn', crossorigin: '' },
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&display=swap' },
+				// 小米字体 "MiSans"
+				{ rel: 'stylesheet', href: 'https://cdn-font.hyperos.mi.com/font/css?family=MiSans:100,200,300,400,450,500,600,650,700,900:Chinese_Simplify,Latin&display=swap' },
+			],
+			templateParams: {
+				separator: '|',
+			},
+			titleTemplate: `%s %separator ${blogConfig.title}`,
+			script: blogConfig.scripts,
+		},
+		rootAttrs: {
+			id: 'z-root',
+		},
+	},
 
-                { rel: 'preconnect', href: 'https://cdn-font.hyperos.mi.com' },
-                // 浏览器渲染中文 VF 字重有问题
-                { rel: 'stylesheet', href: 'https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap', media: 'none', onload: 'this.media="all"' },
-                // https://cdn-font.hyperos.mi.com/font/css?family=MiSans:100,200,300,400,450,500,600,650,700,900:Chinese_Simplify,Latin&display=swap
+	compatibilityDate: '2024-08-03',
 
-                { rel: 'preconnect', href: 'https://fonts.googleapis.cn' },
-                { rel: 'preconnect', href: 'https://fonts.gstatic.cn', crossorigin: '' },
-                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap', media: 'none', onload: 'this.media="all"' },
-                // Fira Code 没有斜体
-                // { rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Fira+Code:wght@300..700&family=Noto+Serif+SC:wght@200..900&display=swap', media: 'none', onload: 'this.media="all"' },
+	components: [
+		{ path: '~/components/partial', prefix: 'Z' },
+		{ path: '~/components/zhilu', prefix: 'Zhilu', global: true },
+		'~/components',
+	],
 
-                // { rel: 'stylesheet', href: 'https://gcore.jsdelivr.net/npm/nerdfonts-web/nf.min.css' },
-            ],
-            templateParams: {
-                separator: '|',
-            },
-            titleTemplate: `%s %separator ${blogConfig.title}`,
-            script: blogConfig.scripts,
-        },
-        rootId: 'z-root',
-    },
+	css: [
+		'@/assets/css/animation.scss',
+		'@/assets/css/article.scss',
+		'@/assets/css/color.scss',
+		'@/assets/css/font.scss',
+		'@/assets/css/main.scss',
+		'@/assets/css/reusable.scss',
+	],
 
-    compatibilityDate: '2025-02-11',
+	features: {
+		inlineStyles: false,
+	},
 
-    components: [
-        { path: '~/components/partial', prefix: 'Z' },
-        { path: '~/components/zhilu', prefix: 'Zhilu', global: true },
-        '~/components',
-    ],
+	// @keep-sorted
+	routeRules: {
+		...Object.entries(redirectList)
+			.reduce<NitroConfig['routeRules']>((acc, [from, to]) => {
+				acc![from] = { redirect: { to, statusCode: 308 } }
+				return acc
+			}, {}),
+		'/api/stats': { prerender: true, headers: { 'Content-Type': 'application/json' } },
+		'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+		'/favicon.ico': { redirect: { to: blogConfig.favicon } },
+		'/zhilu.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+	},
 
-    css: [
-        '@/assets/css/animation.scss',
-        '@/assets/css/article.scss',
-        '@/assets/css/color.scss',
-        '@/assets/css/main.scss',
-        '@/assets/css/reusable.scss',
-    ],
+	runtimeConfig: {
+		public: {
+			buildTime: new Date().toISOString(),
+			nodeVersion: process.version,
+			platform: process.platform,
+			arch: process.arch,
+			ci: process.env.TENCENTCLOUD_RUNENV === 'SCF' ? 'EdgeOne' : ci.name || '',
+		},
+	},
 
-    // https://github.com/nuxt/devtools/issues/761
-    // 修了多久了，还整天内存泄漏
-    devtools: {
-        enabled: false,
-    },
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: '@use "@/assets/css/_variable.scss" as *;',
+				},
+			},
+		},
+		server: {
+			allowedHosts: true,
+		},
+	},
 
-    features: {
-        inlineStyles: false,
-    },
+	// @keep-sorted
+	modules: [
+		'@nuxt/content',
+		'@nuxt/icon',
+		'@nuxt/image',
+		'@nuxtjs/color-mode',
+		'@nuxtjs/seo',
+		'@pinia/nuxt',
+		'@vueuse/nuxt',
+		'unplugin-yaml/nuxt',
+	],
 
-    future: {
-        compatibilityVersion: 4,
-    },
+	colorMode: {
+		preference: 'system',
+		fallback: 'light',
+		classSuffix: '',
+	},
 
-    routeRules,
+	content: {
+		build: {
+			markdown: {
+				highlight: false,
+				// @keep-sorted
+				remarkPlugins: {
+					'remark-math': {},
+					'remark-reading-time': {},
+				},
+				rehypePlugins: {
+					'rehype-katex': {},
+				},
+				toc: { depth: 4, searchDepth: 4 },
+			},
+		},
+	},
 
-    runtimeConfig: {
-        public: {
-            buildTime: new Date().toISOString(),
-            isClient: process.client,
-        },
-    },
+	hooks: {
+		'ready': () => {
+			console.info(`
+================================
+${packageJson.name} ${packageJson.version}
+${packageJson.homepage}
+================================
+`)
+		},
+		'content:file:afterParse': (ctx) => {
+			const permalink = ctx.content.permalink as string
+			if (permalink) {
+				ctx.content.path = permalink
+				return
+			}
+			// 在 URL 中隐藏文件路由自动生成的 /posts 路径前缀
+			if (blogConfig.article.hidePostPrefix) {
+				const realPath = ctx.content.path as string
+				ctx.content.path = realPath.replace(/^\/posts/, '')
+			}
+		},
+	},
 
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: '@use "@/assets/css/_variable.scss" as *;',
-                    api: 'modern-compiler',
-                },
-            },
-        },
-        server: {
-            allowedHosts: true,
-        },
-    },
+	icon: {
+		customCollections: [
+			{ prefix: 'zi', dir: './app/assets/icons' },
+		],
+	},
 
-    modules: [
-        '@nuxt/content',
-        '@nuxt/icon',
-        '@nuxt/image',
-        '@nuxtjs/color-mode',
-        '@nuxtjs/seo',
-        '@pinia/nuxt',
-        '@vueuse/nuxt',
-        '@zinkawaii/nuxt-shiki',
-    ],
+	image: {
+		// Netlify 需要特殊处理
+		provider: process.env.NUXT_IMAGE_PROVIDER,
+		format: ['avif', 'webp'],
+	},
 
-    colorMode: {
-        preference: 'system',
-        fallback: 'light',
-        classSuffix: '',
-    },
+	linkChecker: {
+		// @keep-sorted
+		skipInspections: [
+			'no-baseless',
+			'no-non-ascii-chars',
+			'no-uppercase-chars',
+		],
+	},
 
-    content: {
-        experimental: {
-            search: {},
-        },
-        highlight: {
-            langs: blogConfig.shiki.langs,
-            theme: {
-                default: blogConfig.shiki.defaultTheme,
-                dark: blogConfig.shiki.darkTheme,
-            },
-        },
-        markdown: {
-            remarkPlugins: ['remark-reading-time'],
-            toc: { depth: 4, searchDepth: 4 },
-        },
-    },
+	robots: {
+		disableNuxtContentIntegration: true,
+		disallow: blogConfig.article.robotsNotIndex,
+	},
 
-    icon: {
-        customCollections: [
-            { prefix: 'zi', dir: './app/assets/icons' },
-        ],
-    },
-
-    image: {
-        // Netlify 需要特殊处理
-        provider: process.env.NUXT_IMAGE_PROVIDER,
-        domains: blogConfig.imageDomains,
-        format: ['avif', 'webp'],
-    },
-
-    robots: {
-        disallow: blogConfig.robotsNotIndex,
-    },
-
-    shiki: {
-        bundledLangs: blogConfig.shiki.bundledLangs,
-        bundledThemes: blogConfig.shiki.themes,
-        defaultLang: 'log',
-        defaultTheme: {
-            light: blogConfig.shiki.defaultTheme,
-            dark: blogConfig.shiki.darkTheme,
-        },
-    },
-
-    site: {
-        name: blogConfig.title,
-        url: blogConfig.url,
-    },
+	site: {
+		name: blogConfig.title,
+		url: blogConfig.url,
+		defaultLocale: blogConfig.language,
+	},
 })
