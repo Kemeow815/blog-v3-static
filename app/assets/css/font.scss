@@ -27,7 +27,7 @@ $font-weights: (
 	@font-face {
 		font-family: Inter-Local;
 		font-style: normal;
-		font-weight: #{$weight};
+		font-weight: $weight;
 		font-display: swap;
 		src: local("Inter #{$name}");
 	}
@@ -35,7 +35,7 @@ $font-weights: (
 	@font-face {
 		font-family: Inter-Local;
 		font-style: italic;
-		font-weight: #{$weight};
+		font-weight: $weight;
 		font-display: swap;
 		src: local("Inter #{$name} Italic");
 	}
@@ -43,7 +43,7 @@ $font-weights: (
 	@font-face {
 		font-family: "Noto Sans SC-Local";
 		font-style: normal;
-		font-weight: #{$weight};
+		font-weight: $weight;
 		font-display: swap;
 		src: local("Noto Sans SC-#{$name}");
 	}
@@ -51,7 +51,7 @@ $font-weights: (
 	@font-face {
 		font-family: "Noto Serif SC-Local";
 		font-style: normal;
-		font-weight: #{$weight};
+		font-weight: $weight;
 		font-display: swap;
 		src: local("Noto Serif SC-#{$name}");
 	}
@@ -77,13 +77,11 @@ $font-weights: (
 @supports (font-variant-alternates: normal) {
 	@font-face {
 		font-family: "Noto Sans SC-Local";
-		font-weight: 100 900;
 		src: local("Noto Sans SC");
 	}
 
 	@font-face {
 		font-family: "Noto Serif SC-Local";
-		font-weight: 100 900;
 		src: local("Noto Serif SC");
 	}
 }
