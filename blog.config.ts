@@ -114,7 +114,7 @@ export const routeRules = <NitroConfig['routeRules']>{
 	'/api/umami': { prerender: true, headers: { 'Content-Type': 'application/json' } },
 	'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 	'/favicon.ico': { redirect: { to: blogConfig.favicon } },
-	'/luoh.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+	'/kemiao.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 }
 
 export default blogConfig
