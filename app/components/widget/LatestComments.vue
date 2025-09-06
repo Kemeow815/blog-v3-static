@@ -128,12 +128,23 @@ async function fetchComments() {
 	}
 }
 
-onMounted(() => {
+// 抽离启动/销毁逻辑，避免内联匿名函数被多次 transform
+let timer: ReturnType<typeof setInterval> | null = null
+
+function startPolling() {
 	fetchComments()
-	// 每10分钟自动刷新一次
-	const timer = setInterval(fetchComments, 10 * 60 * 1000)
-	onUnmounted(() => clearInterval(timer))
-})
+	timer = setInterval(fetchComments, 10 * 60 * 1000)
+}
+
+function stopPolling() {
+	if (timer) {
+		clearInterval(timer)
+		timer = null
+	}
+}
+
+onMounted(() => startPolling())
+onUnmounted(() => stopPolling())
 </script>
 
 <template>
