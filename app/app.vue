@@ -11,6 +11,7 @@
 </div>
 <ZPanel />
 <ZPopover />
+<FloatButton />
 </template>
 
 <!-- eslint-disable-next-line vue/enforce-style-attribute -->

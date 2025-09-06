@@ -3,26 +3,27 @@ import type { FeedEntry } from './app/types/feed'
 export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
 
 const basicConfig = {
-	title: '纸鹿摸鱼处',
-	subtitle: '纸鹿至麓不知路，支炉制露不止漉',
+	title: '喵洛阁',
+	subtitle: '愿你看清一切真相后，依旧热爱你的家人和朋友。',
 	// 长 description 利好于 SEO
-	description: '纸鹿本鹿的个人博客，分享技术与生活。“折腾不止，摸鱼生活——摸门🙏🏻”。纸鹿是一名开源爱好者，结识了许多志同道合的朋友。这个博客记录了他在生活和技术学习中的点滴经历，充满启发与思考。网站界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
+	description: '喵的小站,克喵在博客里记录生活日记、资源分享和踩坑教程。。',
+	keywords: '博客, 个人网站, 克喵',
 	author: {
-		name: '纸鹿本鹿',
-		avatar: 'https://www.zhilu.site/api/avatar.png',
-		email: 'hi@zhilu.cyou',
-		homepage: 'https://www.zhilu.site/',
+		name: '克喵爱吃卤面',
+		avatar: 'https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp',
+		email: 'me@mail.kemeow.top',
+		homepage: 'https://home.kemeow.top/',
 	},
 	copyright: {
 		abbr: 'CC BY-NC-SA 4.0',
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://www.zhilu.site/api/icon.png',
+	favicon: 'https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp',
 	language: 'zh-CN',
-	timeEstablished: '2019-07-19',
+	timeEstablished: '2025-02-11',
 	timezone: 'Asia/Shanghai',
-	url: 'https://blog.zhilu.site/',
+	url: 'https://blog-v3.kemeow.top/',
 	defaultCategory: '未分类',
 }
 
@@ -36,9 +37,11 @@ const blogConfig = {
 		categories: {
 			[basicConfig.defaultCategory]: { icon: 'ph:folder-dotted-bold' },
 			经验分享: { icon: 'ph:mouse-bold', color: '#3af' },
-			杂谈: { icon: 'ph:chat-bold', color: '#3ba' },
-			生活: { icon: 'ph:shooting-star-bold', color: '#f77' },
-			代码: { icon: 'ph:code-bold', color: '#77f' },
+			技术分享: { icon: 'ph:code-bold', color: '#77f' },
+			// 生活: { icon: 'ph:shooting-star-bold', color: '#3ba' },
+			// 博客魔改: { icon: 'ph:code-bold', color: '#77f' },
+			资源分享: { icon: 'ph:cloud-bold', color: '#77f' },
+			// 未分类: { icon: 'ph:folder-dotted-bold' },
 		},
 		defaultCategoryIcon: 'ph:folder-bold',
 		/** 分类排序方式，键为排序字段，值为显示名称 */
@@ -55,6 +58,10 @@ const blogConfig = {
 		robotsNotIndex: ['/preview', '/previews/*'],
 	},
 
+	// data: {
+	// 	api_endpoint: 'https://api-blog.helong.online',
+	// },
+
 	/** 博客 Atom 订阅源 */
 	feed: {
 		/** 订阅源最大文章数量 */
@@ -66,17 +73,19 @@ const blogConfig = {
 	/** 向 <head> 中添加脚本 */
 	scripts: [
 		// 自己部署的 Umami 统计服务
-		{ 'src': 'https://zhi.zhilu.cyou/zhi.js', 'data-website-id': 'a1997c81-a42b-46f6-8d1d-8fbd67a8ef41', 'defer': true },
+		{ 'src': 'https://unami-kemiao.kemiaosw.top/String', 'data-website-id': '1a8feaa6-0c4d-444e-8693-02e5a547181a', 'defer': true },
 		// 自己网站的 Cloudflare Insights 统计服务
 		{ 'src': 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "97a4fe32ed8240ac8284e9bffaf03962"}', 'defer': true },
 		// Twikoo 评论系统
 		{ src: 'https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js', defer: true },
+		// 今日诗词 SDK
+		{ src: 'https://sdk.jinrishici.com/v2/browser/jinrishici.js', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
 	twikoo: {
-		envId: 'https://twikoo.zhilu.cyou/',
-		preload: 'https://twikoo.zhilu.cyou/',
+		envId: 'https://kemiao-twikoo.050815.xyz/',
+		preload: 'https://kemiao-twikoo.050815.xyz/',
 	},
 }
 
