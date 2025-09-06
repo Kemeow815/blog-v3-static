@@ -17,7 +17,7 @@ jobs:
       # 0️⃣ 强制清空 Runner 遗留（关键：去掉旧 git 对象）
       - name: 0️⃣ 强制清空 Runner 遗留
         run: |
-          sudo rm -rf "${{ github.workspace }}"
+          sudo rm -rf "${{ github.workspace }}"/*
 
       # 1️⃣ 重新干净克隆
       - name: 1️⃣ 检查 main 分支
