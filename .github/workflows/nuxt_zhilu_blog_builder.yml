@@ -50,11 +50,12 @@ jobs:
       #     user_email: 'github-actions[bot]@users.noreply.github.com'
       #     full_commit_message: ${{ github.event.head_commit.message }}
 
-      - name: 6. 推送到仓库
+      - name: 6. 推送到仓库（单提交，无历史）
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.nuxttoken }}
           repository-name: Kemeow815/blog-v3-static
           branch: main
           folder: .output/public
-          commit-message: "${{ github.event.head_commit.message }} Updated By Github Actions"
+          single-commit: true          # ← 加这一行
+          commit-message: "${{ github.event.head_commit.message }}"
