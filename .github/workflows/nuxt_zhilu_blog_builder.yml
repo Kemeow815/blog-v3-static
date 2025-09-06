@@ -18,8 +18,6 @@ jobs:
       - name: 0️⃣ 强制清空 Runner 遗留
         run: |
           sudo rm -rf "${{ github.workspace }}"
-          sudo rm -rf "$HOME/work/_temp"
-          sudo rm -rf "$HOME/work/_actions"
 
       # 1️⃣ 重新干净克隆
       - name: 1️⃣ 检查 main 分支
