@@ -14,48 +14,48 @@ jobs:
       matrix:
         node-version: [22.16.0]
     steps:
-      # check it to your workflow can access it
-      # from: https://github.com/actions/checkout
-      - name: 1. 检查main分支
-        uses: actions/checkout@master
+      # 0️⃣ 强制清空 Runner 遗留（关键：去掉旧 git 对象）
+      - name: 0️⃣ 强制清空 Runner 遗留
+        run: |
+          sudo rm -rf "${{ github.workspace }}"
+          sudo rm -rf "$HOME/work/_temp"
+          sudo rm -rf "$HOME/work/_actions"
 
-      # from: https://github.com/actions/setup-node
-      - name: 2. 设置Node.js
-        uses: actions/setup-node@v3
+      # 1️⃣ 重新干净克隆
+      - name: 1️⃣ 检查 main 分支
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2️⃣ 设置 Node.js
+      - name: 2️⃣ 设置 Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 3. 安装插件
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      # 3️⃣ 安装 pnpm & 依赖
+      - name: 3️⃣ 安装插件
         run: |
           npm install -g pnpm@10.13.1
           pnpm install
 
-      - name: 4. 开始构建
+      # 4️⃣ 构建（跳过 /api/umami）
+      - name: 4️⃣ 开始构建
         env:
           LOCAL_GENERATE: true
-        run: |
-          pnpm generate
+        run: pnpm generate
 
-
-      - name: 检查构建产物大小
+      # 5️⃣ 产物大小检查
+      - name: 5️⃣ 检查构建产物大小
         run: du -sh .output/public
-      # - name: 5. 推送到vercel分支
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_branch: Nuxt
-      #     publish_dir: .output/public
-      #     user_name: 'github-actions[bot]'
-      #     user_email: 'github-actions[bot]@users.noreply.github.com'
-      #     full_commit_message: ${{ github.event.head_commit.message }}
 
-      - name: 6. 推送到仓库（单提交，无历史）
+      # 6️⃣ 单提交推送（无历史，不再携带损坏对象）
+      - name: 6️⃣ 推送到仓库（单提交，无历史）
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.nuxttoken }}
           repository-name: Kemeow815/blog-v3-static
           branch: main
           folder: .output/public
-          single-commit: true          # ← 加这一行
+          single-commit: true
           commit-message: "${{ github.event.head_commit.message }}"
