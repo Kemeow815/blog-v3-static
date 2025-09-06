@@ -5,6 +5,8 @@ import blogConfig from './blog.config'
 import packageJson from './package.json'
 import redirectList from './redirects.json'
 
+const isLocalGenerate = process.env.LOCAL_GENERATE === 'true'
+
 // 此处配置无需修改
 export default defineNuxtConfig({
 	app: {
@@ -60,7 +62,6 @@ export default defineNuxtConfig({
 		inlineStyles: false,
 	},
 
-	// @keep-sorted
 	routeRules: {
 		...Object.entries(redirectList)
 			.reduce<NitroConfig['routeRules']>((acc, [from, to]) => {
@@ -68,10 +69,14 @@ export default defineNuxtConfig({
 				return acc
 			}, {}),
 		'/api/stats': { prerender: true, headers: { 'Content-Type': 'application/json' } },
-		'/api/umami': { prerender: false, headers: { 'Content-Type': 'application/json' } },
 		'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 		'/favicon.ico': { redirect: { to: blogConfig.favicon } },
 		'/kemiao.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+
+		// ✅ 只在非本地生成时预渲染 /api/umami
+		...(!isLocalGenerate && {
+			'/api/umami': { prerender: true, headers: { 'Content-Type': 'application/json' } },
+		}),
 	},
 
 	runtimeConfig: {
