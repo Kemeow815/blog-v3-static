@@ -32,7 +32,7 @@ export function useUmamiStats() {
 		loading.value = true
 		error.value = null
 		try {
-			const response = await fetch('/server/api/umami')
+			const response = await fetch('/api/umami')
 
 			if (!response.ok) {
 				const errData = await response.json()
