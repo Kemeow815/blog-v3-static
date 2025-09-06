@@ -16,7 +16,7 @@ jobs:
     steps:
       # check it to your workflow can access it
       # from: https://github.com/actions/checkout
-      - name: 1. 检查master分支
+      - name: 1. 检查main分支
         uses: actions/checkout@master
 
       # from: https://github.com/actions/setup-node
