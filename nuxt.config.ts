@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 				return acc
 			}, {}),
 		'/api/stats': { prerender: true, headers: { 'Content-Type': 'application/json' } },
-		'/api/umami': { prerender: true, headers: { 'Content-Type': 'application/json' } },
+		'/api/umami': { prerender: false, headers: { 'Content-Type': 'application/json' } },
 		'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 		'/favicon.ico': { redirect: { to: blogConfig.favicon } },
 		'/kemiao.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
