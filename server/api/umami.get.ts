@@ -79,16 +79,13 @@ async function getUmamiToken(): Promise<string> {
 
 async function verifyToken(token: string): Promise<boolean> {
 	try {
-		const response = await fetch(
-			`${UMAMI_CONFIG.serverUrl}/api/auth/verify`,
-			{
-				method: 'GET', // ← 改成 GET
-				headers: {
-					Authorization: `Bearer ${token}`,
-					Accept: 'application/json',
-				},
+		const response = await fetch(`${UMAMI_CONFIG.serverUrl}/api/auth/verify`, {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${token}`,
+				Accept: 'application/json',
 			},
-		)
+		})
 		return response.ok
 	}
 	catch {
