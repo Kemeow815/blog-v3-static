@@ -98,8 +98,17 @@ const age = new Date().getFullYear() - birthYear
 				<a href="mailto:me@mail.kemeow.top" target="_blank" rel="noopener noreferrer" title="Email:me@mail.kemeow.top">
 					<Icon name="ph:envelope-simple-fill" />
 				</a>
+				<a href="https://t.me/KemiaoJun" target="_blank" rel="noopener noreferrer" title="TG:克喵">
+					<Icon name="mdi:telegram" />
+				</a>
+				<a href="https://x.com/kemiaofxjun" target="_blank" rel="noopener noreferrer" title="X:克喵">
+					<Icon name="mdi:twitter" />
+				</a>
 				<a href="https://qm.qq.com/q/9sljinl6rC" target="_blank" rel="noopener noreferrer" title="QQ:3149261770">
 					<Icon name="ri:qq-fill" />
+				</a>
+				<a href="https://space.bilibili.com/3546643173477234" target="_blank" rel="noopener noreferrer" title="哔哩哔哩">
+					<Icon name="ant-design:bilibili-filled" />
 				</a>
 			</div>
 			<Icon name="ph:address-book-bold" class="card-bg-icon" />
