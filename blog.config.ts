@@ -1,3 +1,4 @@
+import type { NitroConfig } from 'nitropack'
 import type { FeedEntry } from './app/types/feed'
 
 export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
@@ -102,6 +103,18 @@ export const myFeed: FeedEntry = {
 	archs: ['Nuxt', 'Vercel'],
 	date: blogConfig.timeEstablished,
 	comment: '这是我自己',
+}
+
+// https://nitro.build/config#routerules
+// 使用 EdgeOne 部署时，需要同步更新 edgeone.json
+// @keep-sorted
+export const routeRules = <NitroConfig['routeRules']>{
+	// ...redirectRouteRules,
+	'/api/stats': { prerender: true, headers: { 'Content-Type': 'application/json' } },
+	'/api/umami': { prerender: true, headers: { 'Content-Type': 'application/json' } },
+	'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+	'/favicon.ico': { redirect: { to: blogConfig.favicon } },
+	'/luoh.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 }
 
 export default blogConfig
