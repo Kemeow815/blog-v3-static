@@ -3,14 +3,14 @@
   <head>
     <title>喵洛阁的友链订阅</title>
     <dateCreated>2025-02-11T00:00:00.000Z</dateCreated>
-    <dateModified>2025-09-10T15:40:33.520Z</dateModified>
+    <dateModified>2025-09-10T15:45:59.849Z</dateModified>
     <ownerName>克喵爱吃卤面</ownerName>
     <ownerEmail>me@mail.kemeow.top</ownerEmail>
     <ownerId>https://home.kemeow.top/</ownerId>
     <docs>https://opml.org/spec2.opml</docs>
   </head>
   <body>
-    <outline text="喵洛阁" type="rss" xmlUrl="https://blog-v3.kemeow.top/atom.xml" created="2025-02-11T00:00:00.000Z" description="愿你看清一切真相后，依旧热爱你的家人和朋友。" htmlUrl="https://blog-v3.kemeow.top/"></outline>
+    <outline text="喵洛阁" type="rss" xmlUrl="https://blog-v3.kemeow.top/atom.xml" created="2025-02-11T00:00:00.000Z" description="克喵的小栈" htmlUrl="https://blog-v3.kemeow.top/"></outline>
     <outline text="东方月初" type="rss" xmlUrl="https://blog.biuxin.com/atom.xml" created="2025-08-29T00:00:00.000Z" description="分享有趣但又无聊的东西。" htmlUrl="https://blog.biuxin.com/"></outline>
     <outline text="梦爱吃鱼" type="rss" xmlUrl="https://blog.bsgun.cn/atom.xml" created="2025-08-29T00:00:00.000Z" description="不负心灵，不负今生。" htmlUrl="https://blog.bsgun.cn/"></outline>
     <outline text="Akilarの糖果屋" type="rss" xmlUrl="https://akilar.top/atom.xml" created="2025-08-29T00:00:00.000Z" description="欢迎光临糖果屋。" htmlUrl="https://akilar.top/"></outline>

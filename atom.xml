@@ -3,8 +3,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://blog-v3.kemeow.top/</id>
   <title>喵洛阁</title>
-  <updated>2025-09-10T15:40:33.520Z</updated>
-  <description>喵的小站,克喵在博客里记录生活日记、资源分享和踩坑教程。。</description>
+  <updated>2025-09-10T15:45:59.849Z</updated>
+  <description>愿你看清一切真相后，依旧热爱你的家人和朋友。</description>
   <author>
     <name>克喵爱吃卤面</name>
     <email>me@mail.kemeow.top</email>
@@ -17,7 +17,7 @@
   <icon>https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp</icon>
   <logo>https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp</logo>
   <rights>© 2025 克喵爱吃卤面</rights>
-  <subtitle>愿你看清一切真相后，依旧热爱你的家人和朋友。</subtitle>
+  <subtitle>克喵的小栈</subtitle>
   <entry>
     <id>https://blog-v3.kemeow.top/2025/08/19/hexo-beiwang</id>
     <title>Hexo-备忘</title>
