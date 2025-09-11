@@ -3,7 +3,7 @@
   <head>
     <title>喵洛阁的友链订阅</title>
     <dateCreated>2025-02-11T00:00:00.000Z</dateCreated>
-    <dateModified>2025-09-10T15:45:59.849Z</dateModified>
+    <dateModified>2025-09-11T06:09:32.119Z</dateModified>
     <ownerName>克喵爱吃卤面</ownerName>
     <ownerEmail>me@mail.kemeow.top</ownerEmail>
     <ownerId>https://home.kemeow.top/</ownerId>
@@ -18,5 +18,6 @@
     <outline text="清羽飞扬" type="rss" xmlUrl="https://blog.liushen.fun/atom.xml" created="2025-08-29T00:00:00.000Z" description="柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜" htmlUrl="https://blog.liushen.fun/"></outline>
     <outline text="张洪Heo" type="rss" xmlUrl="https://blog.zhheo.com/atom.xml" created="2025-08-29T00:00:00.000Z" description="分享设计与科技生活" htmlUrl="https://blog.zhheo.com/"></outline>
     <outline text="纸鹿摸鱼处" type="rss" xmlUrl="https://blog.zhilu.site/atom.xml" created="2025-08-29T00:00:00.000Z" description="纸鹿至麓不知路，支炉制露不止漉" htmlUrl="https://blog.zhilu.site/"></outline>
+    <outline text="ATao-Blog" type="rss" xmlUrl="https://blog.atao.cyou/atom.xml" created="2025-09-11T00:00:00.000Z" description="做自己喜欢的事" htmlUrl="https://blog.atao.cyou"></outline>
   </body>
 </opml>
